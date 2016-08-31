@@ -15,7 +15,8 @@ class PandocRuby
     'rst'      => 'reStructuredText',
     'textile'  => 'textile',
     'html'     => 'HTML',
-    'latex'    => 'LaTeX'
+    'latex'    => 'LaTeX',
+    'docx'     => 'MS Word'
   }.freeze
 
   # The available string writers and their corresponding names. The keys are
