@@ -108,7 +108,9 @@ class PandocRuby
     if args[0].is_a?(String)
       self.input_string = args.shift
     elsif args[0].is_a?(Array)
-      self.input_files = args.shift.join(' ')
+      input_files = args.shift
+      input_files.map! {|file| '"' + file + '"' }
+      self.input_files = input_files.join(' ')
     end
     self.options = args
   end
